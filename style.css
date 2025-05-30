@@ -1,0 +1,96 @@
+body {
+  background: linear-gradient(to right, #ffe4e1, #ffb6c1);
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.container {
+  max-width: 500px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 1.8em;
+  color: #d6336c;
+}
+
+.buttons {
+  margin-top: 30px;
+  position: relative;
+  height: 120px;
+}
+
+button {
+  font-size: 1.2em;
+  padding: 12px 24px;
+  margin: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+#yesBtn {
+  background-color: #28a745;
+  color: white;
+  z-index: 1;
+}
+
+#noBtn {
+  background-color: #dc3545;
+  color: white;
+  position: absolute;
+  z-index: 1;
+}
+
+.image-container {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  text-align: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.image-container.visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+.image-container img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #555;
+}
+
+.image-container p {
+  width: 100%;
+  font-size: 1.3em;
+  color: #6f42c1;
+  margin-top: 15px;
+}
+
+
+
+/* Responsividade */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5em;
+  }
+
+  button {
+    font-size: 1em;
+    padding: 10px 20px;
+  }
+
+  .buttons {
+    height: 150px;
+  }
+}
